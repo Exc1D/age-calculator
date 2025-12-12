@@ -123,6 +123,16 @@ function animateNumber(el, num) {
 }
 let isCalculated = false;
 const submitBtn = document.querySelector(".submit_btn");
+const ageMessage = document.getElementById("ageMessage");
+
+function getAgeMessage(years) {
+  if (years < 13) return "Wassup witlle 🍼";
+  if (years >= 13 && years <= 17)
+    return "You'll understand when you're older 😉";
+  if (years >= 18 && years <= 39) return "You're the hope of the world 🖖";
+  if (years >= 40 && years <= 60) return "Wow, you're old! 👴";
+  return "Wow! You're ancient! 🦖";
+}
 
 function resetForm() {
   dayInput.value = "";
@@ -131,6 +141,7 @@ function resetForm() {
   dayResult.innerHTML = "--";
   monthResult.innerHTML = "--";
   yearResult.innerHTML = "--";
+  ageMessage.innerHTML = "";
   isCalculated = false;
   submitBtn.classList.remove("reset");
 }
@@ -155,6 +166,10 @@ function handleSubmit(e) {
     animateNumber(dayResult, age.days);
     animateNumber(monthResult, age.months);
     animateNumber(yearResult, age.years);
+
+    setTimeout(() => {
+      ageMessage.innerHTML = getAgeMessage(age.years);
+    }, 1000);
 
     isCalculated = true;
     submitBtn.classList.add("reset");

@@ -115,6 +115,15 @@ input::placeholder {
   color: var(--purple);
 }
 
+.age-message {
+  font-size: 0.9rem;
+  color: var(--smokey-grey);
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+  min-height: 1.5rem;
+}
+
 small {
   color: red;
 }
@@ -188,6 +197,11 @@ footeer a {
   .output h1 {
     font-size: 3rem;
     line-height: 1.1;
+  }
+
+  .age-message {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
   }
 }
 
