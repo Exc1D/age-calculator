@@ -121,8 +121,25 @@ function animateNumber(el, num) {
     }, step);
   }
 }
+let isCalculated = false;
+
+function resetForm() {
+  dayInput.value = "";
+  monthInput.value = "";
+  yearInput.value = "";
+  dayResult.innerHTML = "--";
+  monthResult.innerHTML = "--";
+  yearResult.innerHTML = "--";
+  isCalculated = false;
+}
+
 function handleSubmit(e) {
   e.preventDefault();
+
+  if (isCalculated) {
+    resetForm();
+    return;
+  }
 
   if (validate()) {
     const birthDate = new Date(
@@ -136,5 +153,7 @@ function handleSubmit(e) {
     animateNumber(dayResult, age.days);
     animateNumber(monthResult, age.months);
     animateNumber(yearResult, age.years);
+    
+    isCalculated = true;
   }
 }
