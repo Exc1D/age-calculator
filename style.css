@@ -93,6 +93,11 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.submit_btn.reset {
+  background-color: var(--light-grey);
 }
 
 .output h1 {

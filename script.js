@@ -122,6 +122,7 @@ function animateNumber(el, num) {
   }
 }
 let isCalculated = false;
+const submitBtn = document.querySelector(".submit_btn");
 
 function resetForm() {
   dayInput.value = "";
@@ -131,6 +132,7 @@ function resetForm() {
   monthResult.innerHTML = "--";
   yearResult.innerHTML = "--";
   isCalculated = false;
+  submitBtn.classList.remove("reset");
 }
 
 function handleSubmit(e) {
@@ -155,5 +157,6 @@ function handleSubmit(e) {
     animateNumber(yearResult, age.years);
     
     isCalculated = true;
+    submitBtn.classList.add("reset");
   }
 }
