@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/Exc1D/age-calculator)
-- Live Site URL: [Live Demo](https://exc1d.github.io/age-calculator/)
+- Live Site URL: [Live Demo](https://exc1d.github.io/day-03-age-calculator/)
 
 ## My process
 
